@@ -65,11 +65,11 @@ public class Rapigrama {
 
 	private boolean recorrerEste(String palabra) {
 		for (int i = 0; i < cuadrilla.length; i++) {
-			String linea = "";
+			StringBuilder linea = new StringBuilder();
 			for (int j = 0; j < cuadrilla.length; j++) {
-				linea += Character.toString(this.cuadrilla[i][j]);
+				linea.append(Character.toString(this.cuadrilla[i][j]));
 			}
-			if (linea.contains(palabra)) {
+			if (linea.toString().contains(palabra)) {
 				return true;
 			}
 		}
@@ -78,11 +78,11 @@ public class Rapigrama {
 
 	private boolean recorrerOeste(String palabra) {
 		for (int i = 0; i < cuadrilla.length; i++) {
-			String linea = "";
+			StringBuilder linea = new StringBuilder();
 			for (int j = cuadrilla.length - 1; j >= 0; j--) {
-				linea += Character.toString(this.cuadrilla[i][j]);
+				linea.append(Character.toString(this.cuadrilla[i][j]));
 			}
-			if (linea.contains(palabra)) {
+			if (linea.toString().contains(palabra)) {
 				return true;
 			}
 		}
@@ -91,11 +91,11 @@ public class Rapigrama {
 
 	private boolean recorrerSur(String palabra) {
 		for (int i = 0; i < cuadrilla.length; i++) {
-			String linea = "";
+			StringBuilder linea = new StringBuilder();
 			for (int j = 0; j < cuadrilla.length; j++) {
-				linea += Character.toString(this.cuadrilla[j][i]);
+				linea.append(Character.toString(this.cuadrilla[j][i]));
 			}
-			if (linea.contains(palabra)) {
+			if (linea.toString().contains(palabra)) {
 				return true;
 			}
 		}
@@ -104,11 +104,11 @@ public class Rapigrama {
 
 	private boolean recorrerNorte(String palabra) {
 		for (int i = 0; i < cuadrilla.length; i++) {
-			String linea = "";
+			StringBuilder linea = new StringBuilder();
 			for (int j = cuadrilla.length - 1; j >= 0; j--) {
-				linea += Character.toString(this.cuadrilla[j][i]);
+				linea.append(Character.toString(this.cuadrilla[j][i]));
 			}
-			if (linea.contains(palabra)) {
+			if (linea.toString().contains(palabra)) {
 				return true;
 			}
 		}
